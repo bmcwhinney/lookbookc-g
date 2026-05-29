@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copa + Glas, Studio Lookbook 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Reset ─── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ─── Brand tokens ─── */
+    :root {
+      --dark:    #0a0a0a;
+      --fg:      #0d0d0d;
+      --accent:  #8B4513;
+      --accent2: #b87352;
+      --muted:   #ede9e2;
+      --offwhite:#e8e3db;
+      --faint:   #f5f1eb;
+      --white:   #ffffff;
+      --serif:   'Playfair Display', Georgia, 'Times New Roman', serif;
+    }
+
+    /* ─── Body / print container ─── */
+    body {
+      font-family: var(--serif);
+      background: #b0aca6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ─── Page geometry ─── */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 24px;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.25);
+    }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    @media print {
+      body { background: white; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+
+    /* ─── Shared utilities ─── */
+    .fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .fill-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+    .rule-copper {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .rule-copper--wide { width: 64px; }
+    .rule-copper--full { width: 100%; }
+
+    .eyebrow {
+      font-size: 8px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: var(--serif);
+      color: var(--accent);
+    }
+
+    .eyebrow--light { color: rgba(255,255,255,0.55); }
+    .eyebrow--dark  { color: rgba(10,10,10,0.45); }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      background-size: 180px 180px;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 1, COVER
+    ══════════════════════════════════════════ */
+    #cover {
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+    }
+
+    #cover .cover-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.42;
+    }
+
+    #cover .cover-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.72) 0%,
+        rgba(10,10,10,0.18) 40%,
+        rgba(10,10,10,0.18) 58%,
+        rgba(10,10,10,0.88) 100%
+      );
+    }
+
+    #cover .cover-top {
+      position: absolute;
+      top: 13mm;
+      left: 13mm;
+      right: 13mm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #cover .cover-badge {
+      font-size: 7.5px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      font-family: var(--serif);
+    }
+
+    #cover .cover-year {
+      font-size: 7.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      font-family: var(--serif);
+    }
+
+    #cover .cover-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    #cover .cover-logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 9mm;
+      opacity: 0.95;
+    }
+
+    #cover .cover-rule {
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 8mm;
+    }
+
+    #cover .cover-title {
+      font-size: 32pt;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1.12;
+      font-style: italic;
+    }
+
+    #cover .cover-subtitle {
+      margin-top: 6mm;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-style: normal;
+    }
+
+    #cover .cover-bottom {
+      position: absolute;
+      bottom: 14mm;
+      left: 13mm;
+      right: 13mm;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    #cover .cover-tagline {
+      max-width: 75mm;
+      font-size: 10.5pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    #cover .cover-maker {
+      text-align: right;
+    }
+
+    #cover .cover-maker img {
+      width: 26px;
+      opacity: 0.4;
+      margin-bottom: 4px;
+      display: block;
+      margin-left: auto;
+    }
+
+    #cover .cover-address {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 2, STUDIO INTRODUCTION
+    ══════════════════════════════════════════ */
+    #intro {
+      background: var(--white);
+      display: flex;
+    }
+
+    #intro .intro-image-col {
+      width: 88mm;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #intro .intro-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    #intro .intro-founders {
+      position: absolute;
+      right: 13mm;
+      top: 12mm;
+      width: 44mm;
+      z-index: 5;
+    }
+
+    #intro .intro-founders > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+
+    #intro .intro-content {
+      flex: 1;
+      padding: 18mm 14mm 18mm 12mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #intro .intro-content .eyebrow { margin-bottom: 7mm; }
+
+    #intro .intro-heading {
+      font-size: 21pt;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--fg);
+      margin-bottom: 8mm;
+    }
+
+    #intro .intro-heading em { font-style: italic; color: var(--accent); }
+
+    #intro .rule-copper { margin-bottom: 8mm; }
+
+    #intro .intro-body {
+      font-size: 9.5pt;
+      line-height: 1.82;
+      color: rgba(13,13,13,0.78);
+      margin-bottom: 7mm;
+    }
+
+    #intro .intro-stat-row {
+      display: flex;
+      gap: 8mm;
+      margin-top: 8mm;
+      padding-top: 8mm;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    #intro .intro-stat { flex: 1; }
+
+    #intro .intro-stat-num {
+      font-size: 20pt;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 2mm;
+    }
+
+    #intro .intro-stat-label {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.45);
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 3, COLLECTION OVERVIEW
+    ══════════════════════════════════════════ */
+    #collection-intro {
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 0 16mm 0;
+    }
+
+    #collection-intro .ci-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      opacity: 0.35;
+    }
+
+    #collection-intro .ci-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.3) 50%, rgba(10,10,10,0.55) 100%);
+    }
+
+    #collection-intro .ci-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 16mm;
+    }
+
+    #collection-intro .ci-eyebrow {
+      font-size: 8px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 7mm;
+    }
+
+    #collection-intro .ci-heading {
+      font-size: 40pt;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 8mm;
+    }
+
+    #collection-intro .ci-heading em { font-style: italic; }
+
+    #collection-intro .ci-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 8mm;
+    }
+
+    #collection-intro .ci-copy {
+      font-size: 10.5pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      max-width: 105mm;
+      margin-bottom: 12mm;
+    }
+
+    #collection-intro .ci-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3mm;
+    }
+
+    #collection-intro .ci-thumb {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(139,69,19,0.3);
+    }
+
+    #collection-intro .ci-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.82;
+    }
+
+    #collection-intro .ci-thumb-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2mm 2.5mm;
+      background: rgba(10,10,10,0.7);
+      font-size: 6.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.4;
+    }
+
+    /* ══════════════════════════════════════════
+       PRODUCT PAGES, Shared
+    ══════════════════════════════════════════ */
+    .product-page {
+      background: var(--white);
+    }
+
+    .product-page .prod-image-half {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 108mm;
+      bottom: 0;
+      overflow: hidden;
+      background: var(--faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12mm;
+    }
+
+    .product-page .prod-image-half img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid var(--accent);
+    }
+
+    .product-page .prod-content {
+      position: absolute;
+      top: 0;
+      left: 108mm;
+      right: 0;
+      bottom: 0;
+      padding: 18mm 14mm 14mm 13mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-page .prod-eyebrow { margin-bottom: 6mm; }
+
+    .product-page .prod-name {
+      font-size: 18pt;
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--fg);
+      margin-bottom: 5mm;
+      letter-spacing: 0.02em;
+    }
+
+    .product-page .prod-name em { font-style: italic; }
+
+    .product-page .rule-copper { margin-bottom: 6mm; }
+
+    .product-page .prod-narrative {
+      font-size: 9pt;
+      font-style: italic;
+      line-height: 1.82;
+      color: rgba(13,13,13,0.68);
+      margin-bottom: 7mm;
+      border-left: 2px solid var(--accent);
+      padding-left: 4mm;
+    }
+
+    .product-page .prod-body {
+      font-size: 8.5pt;
+      line-height: 1.85;
+      color: rgba(13,13,13,0.72);
+      margin-bottom: 7mm;
+      flex: 1;
+    }
+
+    .product-page .prod-spec-block {
+      background: var(--faint);
+      padding: 5mm 5mm;
+      margin-top: auto;
+    }
+
+    .product-page .prod-spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 2mm 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .product-page .prod-spec-row:last-child { border-bottom: none; }
+
+    .product-page .prod-spec-key {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.42);
+    }
+
+    .product-page .prod-spec-val {
+      font-size: 8.5pt;
+      color: var(--fg);
+      text-align: right;
+    }
+
+    .product-page .prod-detail-inset {
+      position: absolute;
+      bottom: 14mm;
+      left: 14mm;
+      width: 26mm;
+      height: 26mm;
+      overflow: hidden;
+      border: 1px solid var(--accent);
+    }
+
+    .product-page .prod-detail-inset img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Alt layout, image on right */
+    .product-page.img-right .prod-image-half {
+      left: auto;
+      right: 0;
+    }
+
+    .product-page.img-right .prod-content {
+      left: 0;
+      right: 108mm;
+      padding: 18mm 13mm 14mm 14mm;
+    }
+
+    .product-page.img-right .prod-detail-inset {
+      left: auto;
+      right: 14mm;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 7, AURA WALL LIGHT
+    ══════════════════════════════════════════ */
+    #aura {
+      background: var(--dark);
+    }
+
+    #aura .aura-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.5;
+    }
+
+    #aura .aura-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10,10,10,0.9) 0%,
+        rgba(10,10,10,0.5) 50%,
+        rgba(10,10,10,0.85) 100%
+      );
+    }
+
+    #aura .aura-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      padding: 18mm 15mm;
+    }
+
+    #aura .aura-left {
+      width: 90mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #aura .aura-eyebrow {
+      font-size: 8px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 7mm;
+    }
+
+    #aura .aura-heading {
+      font-size: 28pt;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 7mm;
+    }
+
+    #aura .aura-heading em { font-style: italic; }
+
+    #aura .aura-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 7mm;
+    }
+
+    #aura .aura-body {
+      font-size: 9.5pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.82;
+      margin-bottom: 9mm;
+    }
+
+    #aura .aura-specs {
+      margin-bottom: 10mm;
+    }
+
+    #aura .aura-spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 2.5mm 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    #aura .aura-spec-row:last-child { border-bottom: none; }
+
+    #aura .aura-spec-key {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    #aura .aura-spec-val {
+      font-size: 8.5pt;
+      color: rgba(255,255,255,0.78);
+      text-align: right;
+    }
+
+    #aura .aura-glass-label {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 4mm;
+    }
+
+    #aura .aura-glass-swatches {
+      display: flex;
+      gap: 3mm;
+    }
+
+    #aura .aura-swatch {
+      flex: 1;
+      text-align: center;
+    }
+
+    #aura .aura-swatch img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: block;
+      margin-bottom: 2mm;
+    }
+
+    #aura .aura-swatch-name {
+      font-size: 6px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.4;
+    }
+
+    #aura .aura-right {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+      padding-left: 10mm;
+    }
+
+    #aura .aura-img-main {
+      flex: 1;
+      overflow: hidden;
+      border: 1px solid rgba(139,69,19,0.3);
+    }
+
+    #aura .aura-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      transform: scale(1.15) translateY(-6%);
+    }
+
+    #aura .aura-img-off {
+      height: 52mm;
+      overflow: hidden;
+      border: 1px solid rgba(139,69,19,0.2);
+    }
+
+    #aura .aura-img-off img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 8, LIMITED EDITIONS
+    ══════════════════════════════════════════ */
+    #limited {
+      background: var(--faint);
+    }
+
+    #limited .lim-header {
+      padding: 14mm 16mm 10mm;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #limited .lim-heading {
+      font-size: 20pt;
+      font-weight: 400;
+      color: var(--fg);
+      line-height: 1.1;
+    }
+
+    #limited .lim-heading em { font-style: italic; }
+
+    #limited .lim-header-right {
+      text-align: right;
+    }
+
+    #limited .lim-edition-note {
+      font-size: 7px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.4);
+      line-height: 1.6;
+    }
+
+    #limited .lim-edition-note strong {
+      display: block;
+      font-size: 11pt;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0;
+      margin-bottom: 1mm;
+    }
+
+    #limited .lim-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      height: calc(297mm - 44mm);
+    }
+
+    #limited .lim-item {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    #limited .lim-item:last-child { border-right: none; }
+
+    #limited .lim-item-image {
+      flex: 1;
+      overflow: hidden;
+      background: var(--offwhite);
+    }
+
+    #limited .lim-item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #limited .lim-item-content {
+      padding: 7mm 8mm 8mm;
+      background: var(--white);
+      border-top: 2px solid var(--accent);
+    }
+
+    #limited .lim-item-eyebrow {
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3mm;
+    }
+
+    #limited .lim-item-name {
+      font-size: 13pt;
+      font-weight: 400;
+      line-height: 1.22;
+      color: var(--fg);
+      margin-bottom: 3mm;
+    }
+
+    #limited .lim-item-name em { font-style: italic; }
+
+    #limited .lim-item-desc {
+      font-size: 8pt;
+      font-style: italic;
+      color: rgba(13,13,13,0.62);
+      line-height: 1.75;
+      margin-bottom: 4mm;
+    }
+
+    #limited .lim-item-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    #limited .lim-item-size {
+      font-size: 7px;
+      letter-spacing: 0.14em;
+      color: rgba(13,13,13,0.45);
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 9, BESPOKE COMMISSIONS
+    ══════════════════════════════════════════ */
+    #bespoke {
+      background: var(--dark);
+    }
+
+    #bespoke .bespoke-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100mm;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #bespoke .bespoke-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.55;
+    }
+
+    #bespoke .bespoke-img-grad {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10,10,10,1) 0%, rgba(10,10,10,0) 100%);
+    }
+
+    #bespoke .bespoke-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 115mm;
+      height: 100%;
+      padding: 18mm 14mm 14mm 16mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #bespoke .bespoke-eyebrow {
+      font-size: 8px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 7mm;
+    }
+
+    #bespoke .bespoke-heading {
+      font-size: 30pt;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 7mm;
+    }
+
+    #bespoke .bespoke-heading em { font-style: italic; }
+
+    #bespoke .bespoke-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 7mm;
+    }
+
+    #bespoke .bespoke-intro {
+      font-size: 10pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.78;
+      margin-bottom: 10mm;
+    }
+
+    #bespoke .bespoke-process-label {
+      font-size: 7px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 5mm;
+    }
+
+    #bespoke .bespoke-steps {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    #bespoke .bespoke-step {
+      display: flex;
+      gap: 5mm;
+      padding: 5mm 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    #bespoke .bespoke-step:last-child { border-bottom: none; }
+
+    #bespoke .bespoke-step-num {
+      font-size: 8px;
+      letter-spacing: 0.1em;
+      color: var(--accent2);
+      flex-shrink: 0;
+      width: 6mm;
+      padding-top: 1px;
+    }
+
+    #bespoke .bespoke-step-title {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 1.5mm;
+      line-height: 1.2;
+    }
+
+    #bespoke .bespoke-step-desc {
+      font-size: 8pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    #bespoke .bespoke-cta-block {
+      margin-top: 9mm;
+      padding: 6mm 7mm;
+      border: 1px solid rgba(139,69,19,0.35);
+      background: rgba(139,69,19,0.08);
+    }
+
+    #bespoke .bespoke-cta-label {
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2mm;
+    }
+
+    #bespoke .bespoke-cta-text {
+      font-size: 9pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 2mm;
+      line-height: 1.5;
+    }
+
+    #bespoke .bespoke-email {
+      font-size: 8pt;
+      color: var(--accent2);
+      letter-spacing: 0.04em;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 10, HERITAGE
+    ══════════════════════════════════════════ */
+    #heritage {
+      background: var(--muted);
+    }
+
+    #heritage .heritage-top {
+      height: 62mm;
+      position: relative;
+      overflow: hidden;
+      background: var(--dark);
+    }
+
+    #heritage .heritage-top-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      opacity: 0.45;
+    }
+
+    #heritage .heritage-top-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.7) 100%);
+    }
+
+    #heritage .heritage-top-content {
+      position: absolute;
+      bottom: 9mm;
+      left: 16mm;
+      right: 16mm;
+    }
+
+    #heritage .heritage-top-eyebrow {
+      font-size: 8px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 3mm;
+    }
+
+    #heritage .heritage-top-heading {
+      font-size: 22pt;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    #heritage .heritage-top-heading em { font-style: italic; }
+
+    #heritage .heritage-body {
+      padding: 11mm 16mm;
+    }
+
+    #heritage .heritage-intro {
+      font-size: 10pt;
+      font-style: italic;
+      color: rgba(13,13,13,0.72);
+      line-height: 1.8;
+      margin-bottom: 9mm;
+      border-left: 2px solid var(--accent);
+      padding-left: 5mm;
+    }
+
+    #heritage .heritage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+      margin-bottom: 9mm;
+    }
+
+    #heritage .heritage-item-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 3mm;
+      filter: grayscale(25%);
+    }
+
+    #heritage .heritage-item-label {
+      font-size: 7px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.5);
+      line-height: 1.5;
+    }
+
+    #heritage .heritage-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5mm;
+      padding-top: 8mm;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    #heritage .ht-year {
+      font-size: 14pt;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 2mm;
+      line-height: 1;
+    }
+
+    #heritage .ht-rule {
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 3mm;
+    }
+
+    #heritage .ht-desc {
+      font-size: 7.5pt;
+      color: rgba(13,13,13,0.65);
+      line-height: 1.65;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 11, TRADE PROGRAMME
+    ══════════════════════════════════════════ */
+    #trade {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    #trade .trade-header {
+      background: var(--dark);
+      padding: 14mm 16mm 12mm;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #trade .trade-header-bg {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+    }
+
+    #trade .trade-header-content { position: relative; z-index: 2; }
+
+    #trade .trade-header .eyebrow--light { margin-bottom: 4mm; }
+
+    #trade .trade-header-heading {
+      font-size: 24pt;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    #trade .trade-header-heading em { font-style: italic; }
+
+    #trade .trade-header-sub {
+      font-size: 9.5pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4mm;
+      line-height: 1.6;
+    }
+
+    #trade .trade-body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    #trade .trade-col {
+      padding: 12mm 14mm;
+      border-right: 1px solid rgba(0,0,0,0.08);
+    }
+
+    #trade .trade-col:last-child { border-right: none; }
+
+    #trade .trade-col-label {
+      font-size: 7px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 5mm;
+    }
+
+    #trade .trade-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    #trade .trade-benefits li {
+      padding: 3.5mm 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      display: flex;
+      align-items: baseline;
+      gap: 3mm;
+    }
+
+    #trade .trade-benefits li:last-child { border-bottom: none; }
+
+    #trade .trade-benefits li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      top: -1px;
+    }
+
+    #trade .trade-benefit-text {
+      font-size: 9pt;
+      color: rgba(13,13,13,0.78);
+      line-height: 1.55;
+    }
+
+    #trade .trade-benefit-note {
+      display: block;
+      font-size: 7.5pt;
+      font-style: italic;
+      color: rgba(13,13,13,0.45);
+      margin-top: 0.5mm;
+    }
+
+    #trade .trade-contact-block {
+      margin-top: 8mm;
+      padding: 6mm;
+      background: var(--faint);
+      border-left: 2px solid var(--accent);
+    }
+
+    #trade .trade-contact-label {
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.4);
+      margin-bottom: 3mm;
+    }
+
+    #trade .trade-contact-email {
+      font-size: 10pt;
+      font-style: italic;
+      color: var(--fg);
+      margin-bottom: 2mm;
+    }
+
+    #trade .trade-contact-detail {
+      font-size: 8pt;
+      color: rgba(13,13,13,0.55);
+      line-height: 1.65;
+    }
+
+    #trade .trade-image-col {
+      padding: 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+
+    #trade .trade-img-wrap {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #trade .trade-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #trade .trade-badge-row {
+      display: flex;
+      gap: 4mm;
+      align-items: center;
+    }
+
+    #trade .trade-badge-row img {
+      height: 12mm;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ══════════════════════════════════════════
+       PAGE 12, BACK COVER
+    ══════════════════════════════════════════ */
+    #back-cover {
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #back-cover .bc-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.2;
+    }
+
+    #back-cover .bc-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(139,69,19,0.08) 0%, transparent 65%);
+    }
+
+    #back-cover .bc-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 20mm;
+    }
+
+    #back-cover .bc-rule-top {
+      width: 1px;
+      height: 20mm;
+      background: linear-gradient(to bottom, transparent, rgba(139,69,19,0.5));
+      margin: 0 auto 10mm;
+    }
+
+    #back-cover .bc-logo {
+      width: 48px;
+      height: auto;
+      margin: 0 auto 10mm;
+      display: block;
+    }
+
+    #back-cover .bc-name {
+      font-size: 20pt;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: 0.08em;
+      margin-bottom: 3mm;
+    }
+
+    #back-cover .bc-name em { font-style: italic; }
+
+    #back-cover .bc-tagline {
+      font-size: 9pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.75;
+      margin-bottom: 12mm;
+      max-width: 90mm;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #back-cover .bc-rule-h {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 12mm;
+    }
+
+    #back-cover .bc-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8mm;
+      margin-bottom: 14mm;
+    }
+
+    #back-cover .bc-contact-label {
+      font-size: 7px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 2.5mm;
+    }
+
+    #back-cover .bc-contact-val {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+    }
+
+    #back-cover .bc-rule-bottom {
+      width: 1px;
+      height: 16mm;
+      background: linear-gradient(to top, transparent, rgba(139,69,19,0.4));
+      margin: 0 auto 12mm;
+    }
+
+    #back-cover .bc-foot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8mm;
+    }
+
+    #back-cover .bc-foot img {
+      height: 10mm;
+      width: auto;
+      opacity: 0.3;
+    }
+
+    #back-cover .bc-foot-text {
+      font-size: 7px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       PAGE 1, COVER
+  ══════════════════════════════════════ -->
+  <div class="page" id="cover">
+    <img class="cover-image" src="./public/cover-workshop-wall.png" alt="Copa + Glas workshop wall with working drawings">
+    <div class="cover-overlay"></div>
+    <div class="grain"></div>
+
+    <div class="cover-top">
+      <span class="cover-badge">Studio Lookbook</span>
+      <span class="cover-year">2026 Edition</span>
+    </div>
+
+    <div class="cover-center">
+      <img class="cover-logo" src="./public/copa-monogram-white.png" alt="Copa + Glas">
+      <div class="cover-rule"></div>
+      <div class="cover-title">Copa <em>+</em> Glas</div>
+      <div class="cover-subtitle">Handcrafted Mirrors &amp; Lighting · Est. 2021</div>
+    </div>
+
+    <div class="cover-bottom">
+      <p class="cover-tagline">"Pieces of lasting beauty and significance, made by hand in East London."</p>
+      <div class="cover-maker">
+        <img src="./public/MadeinBRITAIN.png" alt="Made in Britain">
+        <div class="cover-address">East London, England<br>Made to order</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 2, STUDIO INTRODUCTION
+  ══════════════════════════════════════ -->
+  <div class="page" id="intro">
+    <div class="intro-image-col">
+      <img src="./public/ammastercraftsman.png" alt="Anthony McCarty, Master Craftsman">
+    </div>
+    <div class="intro-content">
+      <span class="eyebrow">The Studio</span>
+      <h2 class="intro-heading">A craft studio<br>rooted in <em>forty years</em><br>of making.</h2>
+      <span class="rule-copper"></span>
+      <p class="intro-body">
+        Copa + Glas was founded in 2021 by Anthony McCarty and Bradley McWhinney in East London. Every piece in the collection is made to order, hand-cut glass set in solid copper, formed and finished entirely in our studio.
+      </p>
+      <p class="intro-body">
+        Anthony began cutting glass aged sixteen. He has worked with glass throughout his career, from an early commission on the Saudi Arabia dome in 1983, to Hotel Café Royal's 1,000-piece copper and glass lightwell with David Chipperfield Architects. Our heritage stretches further still, drawing on the 1897 Luxfer Prism glazing tradition that shaped the architectural glass of Frank Lloyd Wright.
+      </p>
+      <p class="intro-body">
+        Each Copa + Glas piece is not a product off a shelf. It is a considered object, selected for its materials, designed for its setting, and made by hand to last.
+      </p>
+      <div class="intro-stat-row">
+        <div class="intro-stat">
+          <div class="intro-stat-num">40+</div>
+          <div class="intro-stat-label">Years of<br>craft experience</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">6–8</div>
+          <div class="intro-stat-label">Week lead<br>time per piece</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">1897</div>
+          <div class="intro-stat-label">Heritage<br>Luxfer lineage</div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-founders">
+      <img src="./public/founders.png" alt="Bradley McWhinney and Anthony McCarty, founders of Copa + Glas">
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 3, COLLECTION OVERVIEW
+  ══════════════════════════════════════ -->
+  <div class="page" id="collection-intro">
+    <img class="ci-image" src="./public/handcut.jpg" alt="Hand-cutting glass in the studio">
+    <div class="ci-overlay"></div>
+    <div class="grain"></div>
+
+    <div class="ci-content">
+      <div class="ci-eyebrow">The Collection · 2026</div>
+      <h2 class="ci-heading">Each piece,<br><em>made once.</em></h2>
+      <div class="ci-rule"></div>
+      <p class="ci-copy">
+        Six works in copper and glass, mirrors, lighting, and limited editions, alongside an open bespoke programme. Every piece is made to order in our East London studio.
+      </p>
+
+      <div class="ci-grid">
+        <div class="ci-thumb">
+          <img src="./public/rotation-mirror.png" alt="Rotation Mirror">
+          <div class="ci-thumb-label">Rotation Mirror</div>
+        </div>
+        <div class="ci-thumb">
+          <img src="./public/mondrian-mirror.png" alt="Mondrian Mirror">
+          <div class="ci-thumb-label">The Mondrian</div>
+        </div>
+        <div class="ci-thumb">
+          <img src="./public/fibonacci-mirror-mantel.png" alt="Fibonacci Mirror">
+          <div class="ci-thumb-label">Fibonacci Mirror</div>
+        </div>
+        <div class="ci-thumb">
+          <img src="./public/aura-wall-light.png" alt="Aura Wall Light">
+          <div class="ci-thumb-label">Aura Wall Light</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 4, ROTATION MIRROR
+  ══════════════════════════════════════ -->
+  <div class="page product-page">
+    <div class="prod-image-half">
+      <img src="./public/rotation-mirror.png" alt="Rotation Mirror">
+    </div>
+    <div class="prod-content">
+      <span class="eyebrow prod-eyebrow">Mirrors · I of III</span>
+      <h2 class="prod-name">The Rotation<br><em>Mirror</em></h2>
+      <span class="rule-copper"></span>
+      <p class="prod-narrative">
+        "Twenty-six hand-cut facets set in solid copper, rigid geometry and fragmented light held in the same breath."
+      </p>
+      <p class="prod-body">
+        The Rotation Mirror is the foundational work of the Copa + Glas collection. Its form explores the tension between the strict and the organic, a geometric framework that fractures light differently at every angle and in every room.
+        <br><br>
+        Originally commissioned for the Burberry Regent Street flagship, the Rotation is now offered in the standard studio configuration of 26 silvered glass facets, hand-cut and set individually into a solid copper frame, hand-formed and finished in our East London studio.
+        <br><br>
+        No two pieces are identical. The hand-finishing process means each frame carries the trace of making.
+      </p>
+      <div class="prod-spec-block">
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Dimensions</span>
+          <span class="prod-spec-val">97cm diameter</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Materials</span>
+          <span class="prod-spec-val">Solid copper · Silvered glass</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Facets</span>
+          <span class="prod-spec-val">26 hand-cut panes</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Lead time</span>
+          <span class="prod-spec-val">6–8 weeks</span>
+        </div>
+      </div>
+    </div>
+    <div class="prod-detail-inset">
+      <img src="./public/rotation-mirror-close.png" alt="Rotation Mirror detail">
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 5, MONDRIAN MIRROR
+  ══════════════════════════════════════ -->
+  <div class="page product-page img-right">
+    <div class="prod-image-half">
+      <img src="./public/mondrian-mirror.png" alt="The Mondrian Mirror">
+    </div>
+    <div class="prod-content">
+      <span class="eyebrow prod-eyebrow">Mirrors · II of III</span>
+      <h2 class="prod-name">The Mondrian<br><em>Mirror</em></h2>
+      <span class="rule-copper"></span>
+      <p class="prod-narrative">
+        "Rectilinear panes in a hand-formed copper grid, an exercise in proportion and the beauty of what lies between."
+      </p>
+      <p class="prod-body">
+        Named for its compositional kinship with the De Stijl movement, The Mondrian Mirror is built entirely from right angles. Each glass pane is cut to a precise specification and set into a copper grid that is hand-formed in the studio, the lines are never perfectly even, because they are never cast from a mould.
+        <br><br>
+        The result is a mirror that reads as architectural from across a room, and as quietly hand-made up close. It suits entrance halls, drawing rooms, and any space that rewards a second look.
+        <br><br>
+        Available in the standard studio proportion or as a bespoke commission adapted to your project.
+      </p>
+      <div class="prod-spec-block">
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Dimensions</span>
+          <span class="prod-spec-val">69.5 × 100.5cm</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Materials</span>
+          <span class="prod-spec-val">Solid copper · Silvered glass</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Panes</span>
+          <span class="prod-spec-val">48 hand-cut panes</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Orientation</span>
+          <span class="prod-spec-val">Portrait (landscape on request)</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Lead time</span>
+          <span class="prod-spec-val">6–8 weeks</span>
+        </div>
+      </div>
+    </div>
+    <div class="prod-detail-inset">
+      <img src="./public/mondrian-mirror-close.png" alt="Mondrian Mirror detail">
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 6, FIBONACCI MIRROR
+  ══════════════════════════════════════ -->
+  <div class="page product-page">
+    <div class="prod-image-half">
+      <img src="./public/fibonacci-mirror-mantel.png" alt="Fibonacci Mirror">
+    </div>
+    <div class="prod-content">
+      <span class="eyebrow prod-eyebrow">Mirrors · III of III</span>
+      <h2 class="prod-name">The Fibonacci<br><em>Mirror</em></h2>
+      <span class="rule-copper"></span>
+      <p class="prod-narrative">
+        "Spiralling golden-ratio geometry in copper and glass, the mathematics of nature made legible in a frame."
+      </p>
+      <p class="prod-body">
+        The Fibonacci Mirror traces the Fibonacci sequence in glass. Each section corresponds to a number in the spiral, stepping outward from the centre in the same proportional rhythm found in nautilus shells and sunflower seed-heads.
+        <br><br>
+        In copper and silvered glass, this structure becomes architectural. The mirror sits comfortably above a mantelpiece or fireplace, though it has equal presence when mounted independently on a wall.
+        <br><br>
+        The Fibonacci is the most recognisably narrative piece in the collection, an object with an argument, and a quiet elegance in how it makes it.
+      </p>
+      <div class="prod-spec-block">
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Dimensions</span>
+          <span class="prod-spec-val">65 × 90cm</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Materials</span>
+          <span class="prod-spec-val">Solid copper · Silvered glass</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Geometry</span>
+          <span class="prod-spec-val">Golden-ratio spiral</span>
+        </div>
+        <div class="prod-spec-row">
+          <span class="prod-spec-key">Lead time</span>
+          <span class="prod-spec-val">6–8 weeks</span>
+        </div>
+      </div>
+    </div>
+    <div class="prod-detail-inset">
+      <img src="./public/fibonacci-mirror-close.png" alt="Fibonacci Mirror detail">
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 7, AURA WALL LIGHT
+  ══════════════════════════════════════ -->
+  <div class="page" id="aura">
+    <img class="aura-bg" src="./public/aura-wall-light.png" alt="Aura Wall Light">
+    <div class="aura-overlay"></div>
+    <div class="grain"></div>
+
+    <div class="aura-content">
+      <div class="aura-left">
+        <div class="aura-eyebrow">Lighting · I of I</div>
+        <h2 class="aura-heading">Aura<br><em>Wall Light</em></h2>
+        <div class="aura-rule"></div>
+        <p class="aura-body">
+          Born from a private commission, the Aura Wall Light began as a study of what happens when glass colour meets copper form in direct light. Each piece is specified to the room it will live in, glass finish, scale, and proportion are all adapted at commission stage.
+          <br><br>
+          The standard studio size is 300 × 415mm, though the example shown here was made at 50 × 65cm with an illuminated Corella Orange art glass centre pane. Each configuration is unique.
+        </p>
+
+        <div class="aura-specs">
+          <div class="aura-spec-row">
+            <span class="aura-spec-key">Standard size</span>
+            <span class="aura-spec-val">300 × 415mm</span>
+          </div>
+          <div class="aura-spec-row">
+            <span class="aura-spec-key">Materials</span>
+            <span class="aura-spec-val">Solid copper · Art glass</span>
+          </div>
+        </div>
+
+        <div class="aura-glass-label">Available glass finishes</div>
+        <div class="aura-glass-swatches">
+          <div class="aura-swatch">
+            <img src="./public/corella-orange.png" alt="Corella Orange">
+            <div class="aura-swatch-name">Corella Orange</div>
+          </div>
+          <div class="aura-swatch">
+            <img src="./public/english-muffle-sussex-green.png" alt="Sussex Green">
+            <div class="aura-swatch-name">Sussex Green</div>
+          </div>
+          <div class="aura-swatch">
+            <img src="./public/corella-yellow.jpg" alt="Corella Yellow">
+            <div class="aura-swatch-name">Corella Yellow</div>
+          </div>
+          <div class="aura-swatch">
+            <img src="./public/antique-wispy-red.png" alt="Antique Red">
+            <div class="aura-swatch-name">Antique Red</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aura-right">
+        <div class="aura-img-main">
+          <img src="./public/aura-wall-light.png" alt="Aura Wall Light lit">
+        </div>
+        <div class="aura-img-off">
+          <img src="./public/aura-wall-light-off.png" alt="Aura Wall Light unlit">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 8, LIMITED EDITIONS
+  ══════════════════════════════════════ -->
+  <div class="page" id="limited">
+    <div class="lim-header">
+      <div>
+        <span class="eyebrow eyebrow--dark" style="display:block; margin-bottom:3mm;">Limited Editions</span>
+        <h2 class="lim-heading">Works in a series<br><em>of ten.</em></h2>
+      </div>
+      <div class="lim-header-right">
+        <div class="lim-edition-note">
+          <strong>1 of 10</strong>
+          worldwide · signed
+        </div>
+      </div>
+    </div>
+
+    <div class="lim-grid">
+      <div class="lim-item">
+        <div class="lim-item-image">
+          <img src="./public/frank-lloyd-wright-mirror.png" alt="Frank Lloyd Wright Mirror">
+        </div>
+        <div class="lim-item-content">
+          <div class="lim-item-eyebrow">Limited Edition · I of X</div>
+          <h3 class="lim-item-name">The Frank Lloyd<br><em>Wright Mirror</em></h3>
+          <p class="lim-item-desc">
+            A direct homage to Wright's Prairie School palette. Clear and coloured art glass in the geometric language of the Luxfer Prism, the same tradition that shaped Wright's studio windows and our own lineage as a studio.
+          </p>
+          <div class="lim-item-meta">
+            <span class="lim-item-size">31.5 × 91cm · Silvered &amp; art glass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lim-item">
+        <div class="lim-item-image">
+          <img src="./public/Exhibitionconfetti.jpg" alt="Rotation Confetti Mirror">
+        </div>
+        <div class="lim-item-content">
+          <div class="lim-item-eyebrow">Limited Edition · I of X</div>
+          <h3 class="lim-item-name">The Rotation<br><em>Confetti Mirror</em></h3>
+          <p class="lim-item-desc">
+            The Rotation Mirror reinvented in refracted colour. Each of the 26 facets holds a different piece of hand-selected coloured art glass, no two pieces identically sequenced. A celebratory work in the spirit of the original.
+          </p>
+          <div class="lim-item-meta">
+            <span class="lim-item-size">97cm diameter · Coloured art glass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 9, BESPOKE COMMISSIONS
+  ══════════════════════════════════════ -->
+  <div class="page" id="bespoke">
+    <div class="bespoke-img">
+      <img src="./public/anthony-cutting-glass.jpg" alt="Anthony cutting glass">
+      <div class="bespoke-img-grad"></div>
+    </div>
+    <div class="grain"></div>
+
+    <div class="bespoke-content">
+      <div class="bespoke-eyebrow">Bespoke Programme</div>
+      <h2 class="bespoke-heading">Made entirely<br><em>for your project.</em></h2>
+      <div class="bespoke-rule"></div>
+      <p class="bespoke-intro">
+        Our bespoke programme is open to private clients, interior designers, and architectural practices. We work from your brief, or develop one together. Scale, composition, glass selection, copper finish: everything is on the table.
+      </p>
+
+      <div class="bespoke-process-label">The process</div>
+
+      <div class="bespoke-steps">
+        <div class="bespoke-step">
+          <div class="bespoke-step-num">01</div>
+          <div>
+            <div class="bespoke-step-title">Begin a conversation</div>
+            <div class="bespoke-step-desc">Write to us with your project. We reply personally, usually within 24 hours. No automated responses, no standard rate card.</div>
+          </div>
+        </div>
+        <div class="bespoke-step">
+          <div class="bespoke-step-num">02</div>
+          <div>
+            <div class="bespoke-step-title">Visit the studio</div>
+            <div class="bespoke-step-desc">By appointment in East London. Meet Anthony, handle materials, review glass samples, and walk through initial drawings before anything is confirmed.</div>
+          </div>
+        </div>
+        <div class="bespoke-step">
+          <div class="bespoke-step-num">03</div>
+          <div>
+            <div class="bespoke-step-title">We make it</div>
+            <div class="bespoke-step-desc">Terms confirmed in writing. Progress shared at the midpoint. A 50% deposit confirms the commission; balance before dispatch. Lead time 6–8 weeks.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bespoke-cta-block">
+        <div class="bespoke-cta-label">Begin a commission</div>
+        <div class="bespoke-cta-text">Write to us with your project brief, as much or as little detail as you have.</div>
+        <div class="bespoke-email">info@copaandglas.com</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 10, HERITAGE & PROVENANCE
+  ══════════════════════════════════════ -->
+  <div class="page" id="heritage">
+    <div class="heritage-top">
+      <img class="heritage-top-img" src="./public/cafe-royal-lightwell-bw.jpg" alt="Hotel Café Royal Lightwell">
+      <div class="heritage-top-overlay"></div>
+      <div class="heritage-top-content">
+        <div class="heritage-top-eyebrow">Heritage &amp; Provenance</div>
+        <h2 class="heritage-top-heading">A studio built on<br><em>a century of craft.</em></h2>
+      </div>
+    </div>
+
+    <div class="heritage-body">
+      <p class="heritage-intro">
+        Copa + Glas draws on a lineage of British glass craft that stretches back to the Luxfer Prism Company, founded in 1897. The same material intelligence that furnished the buildings of Frank Lloyd Wright and the Victorian city now informs every piece we make.
+      </p>
+
+      <div class="heritage-grid">
+        <div class="heritage-item">
+          <img class="heritage-item-img" src="./public/cafe-royal-lightwell-1.jpg" alt="Hotel Café Royal lightwell">
+          <div class="heritage-item-label">Hotel Café Royal<br>1,000+ copper &amp; glass screens<br>David Chipperfield Architects, 2012</div>
+        </div>
+        <div class="heritage-item">
+          <img class="heritage-item-img" src="./public/bigben.png" alt="Big Ben conservation">
+          <div class="heritage-item-label">Palace of Westminster<br>Big Ben conservation<br>glass restoration · 2010</div>
+        </div>
+        <div class="heritage-item">
+          <img class="heritage-item-img" src="./public/anthony-saudi-arabia-1983.jpg" alt="Saudi Arabia commission, 1983">
+          <div class="heritage-item-label">Saudi Arabia<br>Glass dome commission<br>1983</div>
+        </div>
+      </div>
+
+      <div class="heritage-timeline">
+        <div class="ht-item">
+          <div class="ht-year">1897</div>
+          <div class="ht-rule"></div>
+          <div class="ht-desc">Luxfer Prism Co. patents prismatic glass tiles, the architectural glass tradition Copa + Glas draws from.</div>
+        </div>
+        <div class="ht-item">
+          <div class="ht-year">1983</div>
+          <div class="ht-rule"></div>
+          <div class="ht-desc">Anthony's glass dome commission in Saudi Arabia, one of his earliest large-scale architectural works.</div>
+        </div>
+        <div class="ht-item">
+          <div class="ht-year">2012</div>
+          <div class="ht-rule"></div>
+          <div class="ht-desc">Hotel Café Royal lightwell, 1,000+ hand-made copper and glass screens for David Chipperfield Architects.</div>
+        </div>
+        <div class="ht-item">
+          <div class="ht-year">2021</div>
+          <div class="ht-rule"></div>
+          <div class="ht-desc">Copa + Glas founded in East London. The studio collection launches with the Rotation Mirror for Burberry.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 11, TRADE PROGRAMME
+  ══════════════════════════════════════ -->
+  <div class="page" id="trade">
+    <div class="trade-header">
+      <img class="trade-header-bg" src="./public/workshop-hands.png" alt="Workshop detail">
+      <div class="trade-header-content">
+        <span class="eyebrow eyebrow--light" style="display:block; margin-bottom:4mm;">Trade &amp; Design Professional Programme</span>
+        <h2 class="trade-header-heading">Working with<br><em>interior designers.</em></h2>
+        <p class="trade-header-sub">A dedicated programme for architects, interior designers, and trade specifiers, with preferential access, personal contact, and full specification support from the studio.</p>
+      </div>
+    </div>
+
+    <div class="trade-body">
+      <div class="trade-col">
+        <div class="trade-col-label">Programme benefits</div>
+        <ul class="trade-benefits">
+          <li>
+            <div class="trade-benefit-text">
+              Preferential trade pricing
+              <span class="trade-benefit-note">Not published. Quoted directly by the studio.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              Named studio contact
+              <span class="trade-benefit-note">One consistent person for every project and enquiry.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              Full image library at print resolution
+              <span class="trade-benefit-note">Available immediately on request for boards and presentations.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              Bespoke specification support
+              <span class="trade-benefit-note">Anthony McCarty works directly on your commission brief.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              VAT invoicing ex-VAT
+              <span class="trade-benefit-note">Standard for all verified trade accounts.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              No minimum order
+              <span class="trade-benefit-note">One piece made with the same attention as ten.</span>
+            </div>
+          </li>
+          <li>
+            <div class="trade-benefit-text">
+              Worldwide white-glove delivery
+              <span class="trade-benefit-note">For architectural and trade commissions.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="trade-contact-block">
+          <div class="trade-contact-label">To register your practice</div>
+          <div class="trade-contact-email">info@copaandglas.com</div>
+          <div class="trade-contact-detail">
+            Write with a brief introduction to your practice.<br>
+            We will set up your account and introduce you to your studio contact.
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-col trade-image-col">
+        <div class="trade-img-wrap">
+          <img src="./public/workshop-tools.webp" alt="Workshop tools">
+        </div>
+        <div class="trade-badge-row">
+          <img src="./public/MadeinBRITAIN.png" alt="Made in Britain">
+          <img src="./public/ACIDLOGO.png" alt="ACID Member">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 12, BACK COVER
+  ══════════════════════════════════════ -->
+  <div class="page" id="back-cover">
+    <img class="bc-bg" src="./public/heroimage.png" alt="Copa + Glas studio">
+    <div class="bc-overlay"></div>
+    <div class="grain"></div>
+
+    <div class="bc-content">
+      <div class="bc-rule-top"></div>
+      <img class="bc-logo" src="./public/copa-monogram-white.png" alt="Copa + Glas">
+      <div class="bc-name">Copa <em>+</em> Glas</div>
+      <p class="bc-tagline">
+        Handcrafted mirrors and lighting, made to order in East London. Rooted in the traditions of British craft.
+      </p>
+      <div class="bc-rule-h"></div>
+
+      <div class="bc-contact-grid">
+        <div class="bc-contact-item">
+          <div class="bc-contact-label">Enquiries &amp; Trade</div>
+          <div class="bc-contact-val">info@copaandglas.com</div>
+        </div>
+        <div class="bc-contact-item">
+          <div class="bc-contact-label">Studio visits</div>
+          <div class="bc-contact-val">East London<br>By appointment</div>
+        </div>
+        <div class="bc-contact-item">
+          <div class="bc-contact-label">Instagram</div>
+          <div class="bc-contact-val">@copaandglas</div>
+        </div>
+      </div>
+
+      <div class="bc-rule-bottom"></div>
+
+      <div class="bc-foot">
+        <img src="./public/MadeinBRITAIN.png" alt="Made in Britain">
+        <div class="bc-foot-text">
+          Made to order · East London · Est. 2021<br>
+          ACID member · All rights reserved
+        </div>
+        <img src="./public/ACIDLOGO.png" alt="ACID">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
