@@ -1,0 +1,163 @@
+/*
+ * Print & PDF export — legibility overrides for physical output.
+ * Ink reads lighter than screen; small caps with wide tracking need help.
+ * Loaded by generate-pdf.mjs (and via @media print in index.html).
+ */
+
+/* ── Colour fidelity ── */
+*, *::before, *::after {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Grain can muddy on uncoated stock */
+.grain {
+  opacity: 0.12 !important;
+}
+
+/* ── Micro type: enforce print minimums (7pt ≈ 9.3px) ── */
+.eyebrow,
+#cover .cover-badge,
+#cover .cover-year,
+#cover .cover-subtitle,
+#cover .cover-address,
+#intro .intro-stat-label,
+#collection-intro .ci-eyebrow,
+#collection-intro .ci-thumb-label,
+.product-page .prod-spec-key,
+#aura .aura-eyebrow,
+#aura .aura-spec-key,
+#aura .aura-glass-label,
+#aura .aura-swatch-name,
+#limited .lim-edition-note,
+#limited .lim-item-eyebrow,
+#limited .lim-item-size,
+#bespoke .bespoke-eyebrow,
+#bespoke .bespoke-process-label,
+#bespoke .bespoke-step-num,
+#bespoke .bespoke-cta-label,
+#heritage .heritage-top-eyebrow,
+#heritage .heritage-item-label,
+#trade .trade-col-label,
+#trade .trade-contact-label,
+#back-cover .bc-contact-label,
+#back-cover .bc-foot-text {
+  font-size: 7pt !important;
+  letter-spacing: 0.14em !important;
+  font-weight: 600 !important;
+}
+
+#heritage .ht-desc {
+  font-size: 7.5pt !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ── Body & supporting text ── */
+#intro .intro-body,
+.product-page .prod-narrative,
+.product-page .prod-body,
+.product-page .prod-spec-val,
+#collection-intro .ci-copy,
+#aura .aura-body,
+#aura .aura-spec-val,
+#limited .lim-item-desc,
+#bespoke .bespoke-intro,
+#bespoke .bespoke-step-desc,
+#bespoke .bespoke-cta-text,
+#heritage .heritage-intro,
+#trade .trade-header-sub,
+#trade .trade-benefit-text,
+#trade .trade-benefit-note,
+#trade .trade-contact-detail,
+#back-cover .bc-tagline {
+  font-size: 8.5pt !important;
+  line-height: 1.75 !important;
+}
+
+/* Contact details must stay readable — designers need these */
+#bespoke .bespoke-email,
+#trade .trade-contact-email,
+#back-cover .bc-contact-val {
+  font-size: 9.5pt !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+/* ── Contrast: on-dark muted text (screen opacities print too faint) ── */
+.eyebrow--light,
+#cover .cover-badge,
+#cover .cover-year,
+#cover .cover-subtitle,
+#cover .cover-tagline {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+#cover .cover-address,
+#back-cover .bc-contact-label,
+#back-cover .bc-foot-text {
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+#collection-intro .ci-copy,
+#aura .aura-body,
+#aura .aura-spec-val,
+#bespoke .bespoke-intro,
+#bespoke .bespoke-step-desc,
+#bespoke .bespoke-cta-text,
+#back-cover .bc-tagline,
+#back-cover .bc-contact-val {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+#aura .aura-spec-key,
+#aura .aura-glass-label,
+#aura .aura-swatch-name,
+#bespoke .bespoke-process-label,
+#bespoke .bespoke-cta-label {
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+#trade .trade-header-sub {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* ── Contrast: on-light muted text ── */
+.eyebrow--dark,
+#intro .intro-body,
+#intro .intro-stat-label,
+.product-page .prod-narrative,
+.product-page .prod-body,
+.product-page .prod-spec-key,
+#limited .lim-edition-note,
+#limited .lim-item-desc,
+#limited .lim-item-size,
+#heritage .heritage-intro,
+#heritage .heritage-item-label,
+#heritage .ht-desc,
+#trade .trade-benefit-text,
+#trade .trade-benefit-note,
+#trade .trade-contact-label,
+#trade .trade-contact-detail {
+  color: rgba(13, 13, 13, 0.72) !important;
+}
+
+.product-page .prod-spec-key,
+#limited .lim-item-eyebrow,
+#trade .trade-col-label {
+  color: var(--accent) !important;
+}
+
+#collection-intro .ci-eyebrow {
+  color: var(--accent2) !important;
+}
+
+/* ── Hairline rules: ensure they survive print ── */
+.rule-copper,
+#cover .cover-rule,
+#collection-intro .ci-rule,
+#aura .aura-rule,
+#bespoke .bespoke-rule,
+#heritage .ht-rule,
+#back-cover .bc-rule-h {
+  background: var(--accent) !important;
+}
