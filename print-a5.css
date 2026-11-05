@@ -1,0 +1,199 @@
+/*
+ * A5 print legibility — floors on top of scaled a5.css + print.css.
+ * At 148 mm, proportional scaling pushes micro type below readable limits.
+ */
+
+body.format-a5 .eyebrow,
+body.format-a5 #cover .cover-badge,
+body.format-a5 #cover .cover-year,
+body.format-a5 #cover .cover-subtitle,
+body.format-a5 #cover .cover-address,
+body.format-a5 #intro .intro-stat-label,
+body.format-a5 #collection-intro .ci-eyebrow,
+body.format-a5 #collection-intro .ci-thumb-label,
+body.format-a5 .product-page .prod-spec-key,
+body.format-a5 #aura .aura-eyebrow,
+body.format-a5 #aura .aura-spec-key,
+body.format-a5 #aura .aura-glass-label,
+body.format-a5 #aura .aura-swatch-name,
+body.format-a5 #limited .lim-edition-note,
+body.format-a5 #limited .lim-item-eyebrow,
+body.format-a5 #limited .lim-item-size,
+body.format-a5 #bespoke .bespoke-eyebrow,
+body.format-a5 #bespoke .bespoke-process-label,
+body.format-a5 #bespoke .bespoke-step-num,
+body.format-a5 #bespoke .bespoke-cta-label,
+body.format-a5 #heritage .heritage-top-eyebrow,
+body.format-a5 #heritage .heritage-item-label,
+body.format-a5 #trade .trade-col-label,
+body.format-a5 #trade .trade-contact-label,
+body.format-a5 #back-cover .bc-contact-label,
+body.format-a5 #back-cover .bc-foot-text,
+body.format-a5 #heritage .ht-desc {
+  font-size: 6.5pt !important;
+  letter-spacing: 0.12em !important;
+}
+
+body.format-a5 #intro .intro-body,
+body.format-a5 .product-page .prod-narrative,
+body.format-a5 .product-page .prod-body,
+body.format-a5 .product-page .prod-spec-val,
+body.format-a5 #collection-intro .ci-copy,
+body.format-a5 #aura .aura-body,
+body.format-a5 #aura .aura-spec-val,
+body.format-a5 #limited .lim-item-desc,
+body.format-a5 #bespoke .bespoke-intro,
+body.format-a5 #bespoke .bespoke-step-desc,
+body.format-a5 #bespoke .bespoke-cta-text,
+body.format-a5 #heritage .heritage-intro,
+body.format-a5 #trade .trade-header-sub,
+body.format-a5 #trade .trade-benefit-text,
+body.format-a5 #trade .trade-benefit-note,
+body.format-a5 #trade .trade-contact-detail,
+body.format-a5 #back-cover .bc-tagline {
+  font-size: 8pt !important;
+  line-height: 1.7 !important;
+}
+
+body.format-a5 #bespoke .bespoke-email,
+body.format-a5 #trade .trade-contact-email,
+body.format-a5 #back-cover .bc-contact-val {
+  font-size: 7.5pt !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+}
+
+/* Slightly tighten wide-tracking headings on small page */
+body.format-a5 #cover .cover-title {
+  letter-spacing: 0.03em !important;
+}
+
+/* Page 11 — trade programme: fit content within A5 height */
+body.format-a5 #trade .trade-header {
+  padding: 7mm 10mm 6mm !important;
+}
+
+body.format-a5 #trade .trade-header-heading {
+  font-size: 14pt !important;
+  line-height: 1.08 !important;
+}
+
+body.format-a5 #trade .trade-header-sub {
+  font-size: 7.5pt !important;
+  line-height: 1.45 !important;
+  margin-top: 2mm !important;
+}
+
+body.format-a5 #trade .trade-col {
+  padding: 5mm 7mm 4mm !important;
+}
+
+body.format-a5 #trade .trade-col-label {
+  margin-bottom: 2mm !important;
+}
+
+body.format-a5 #trade .trade-benefits li {
+  padding: 1.4mm 0 !important;
+}
+
+body.format-a5 #trade .trade-benefit-text {
+  font-size: 7.5pt !important;
+  line-height: 1.38 !important;
+}
+
+body.format-a5 #trade .trade-benefit-note {
+  font-size: 6.5pt !important;
+  line-height: 1.32 !important;
+  margin-top: 0.2mm !important;
+}
+
+body.format-a5 #trade .trade-contact-block {
+  margin-top: 3mm !important;
+  padding: 3.5mm !important;
+}
+
+body.format-a5 #trade .trade-contact-detail {
+  font-size: 7pt !important;
+  line-height: 1.4 !important;
+}
+
+body.format-a5 #trade .trade-image-col {
+  padding: 5mm 5mm 4mm !important;
+  gap: 2.5mm !important;
+}
+
+body.format-a5 #trade .trade-badge-row img {
+  height: 7mm !important;
+}
+
+/* Page 2 — studio intro: stats must stay on page */
+body.format-a5 #intro .intro-content {
+  padding: 54mm 9.87mm 6mm 8.46mm !important;
+}
+
+body.format-a5 #intro .intro-heading {
+  font-size: 14pt !important;
+  margin-bottom: 3.5mm !important;
+}
+
+body.format-a5 #intro .intro-content .eyebrow,
+body.format-a5 #intro .rule-copper {
+  margin-bottom: 3.5mm !important;
+}
+
+body.format-a5 #intro .intro-body {
+  font-size: 7.5pt !important;
+  line-height: 1.55 !important;
+  margin-bottom: 2.5mm !important;
+}
+
+body.format-a5 #intro .intro-stat-row {
+  padding-top: 3.5mm !important;
+}
+
+body.format-a5 #intro .intro-stat-num {
+  font-size: 14pt !important;
+  margin-bottom: 1mm !important;
+}
+
+/* Page 9 — bespoke: keep CTA block on page */
+body.format-a5 #bespoke .bespoke-content {
+  padding: 11mm 9.87mm 7mm 11.28mm !important;
+}
+
+body.format-a5 #bespoke .bespoke-heading {
+  font-size: 19pt !important;
+  margin-bottom: 4mm !important;
+}
+
+body.format-a5 #bespoke .bespoke-rule,
+body.format-a5 #bespoke .bespoke-eyebrow {
+  margin-bottom: 4mm !important;
+}
+
+body.format-a5 #bespoke .bespoke-intro {
+  margin-bottom: 4mm !important;
+  line-height: 1.55 !important;
+}
+
+body.format-a5 #bespoke .bespoke-process-label {
+  margin-bottom: 2.5mm !important;
+}
+
+body.format-a5 #bespoke .bespoke-step {
+  padding: 2.5mm 0 !important;
+}
+
+body.format-a5 #bespoke .bespoke-step-title {
+  font-size: 8pt !important;
+  margin-bottom: 1mm !important;
+}
+
+body.format-a5 #bespoke .bespoke-step-desc {
+  font-size: 7pt !important;
+  line-height: 1.42 !important;
+}
+
+body.format-a5 #bespoke .bespoke-cta-block {
+  padding: 3.5mm 4.5mm !important;
+}

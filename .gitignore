@@ -1,0 +1,9 @@
+node_modules/
+a5.css
+a5-debug-*.png
+a5-fixed-*.png
+a5-check-*.png
+a5-test-*.pdf
+a5-cover-element.png
+pdf-preview-*.png
+.DS_Store

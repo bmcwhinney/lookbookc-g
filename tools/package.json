@@ -1,0 +1,30 @@
+{
+  "name": "lookbookc-g-publish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:a5-css": "node build-a5-css.mjs",
+    "pdf": "node generate-pdf.mjs --format=a4",
+    "pdf:a4": "node generate-pdf.mjs --format=a4",
+    "pdf:a5": "node build-a5-css.mjs && node generate-pdf.mjs --format=a5",
+    "pdf:all": "node generate-pdf.mjs --format=a4 && npm run pdf:a5",
+    "pdf:workspace": "node generate-workspace-pdf.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmcwhinney/lookbookc-g.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bmcwhinney/lookbookc-g/issues"
+  },
+  "homepage": "https://github.com/bmcwhinney/lookbookc-g#readme",
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.61.1"
+  }
+}
