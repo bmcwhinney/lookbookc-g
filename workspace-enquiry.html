@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Copa + Glas — Studio Workspace Enquiry</title>
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --dark:    #0a0a0a;
+      --fg:      #0d0d0d;
+      --accent:  #8B4513;
+      --accent2: #b87352;
+      --muted:   #ede9e2;
+      --offwhite:#e8e3db;
+      --faint:   #f5f1eb;
+      --white:   #ffffff;
+      --serif:   'Newsreader', Georgia, 'Times New Roman', serif;
+      --sans:    'Geist', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--serif);
+      background: #b0aca6;
+      color: var(--fg);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 24px;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.25);
+    }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    .eyebrow {
+      font-size: 7.5pt;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .rule-copper {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    /* ── Page 1: Enquiry letter ── */
+    #letter {
+      display: flex;
+      flex-direction: column;
+      padding: 22mm 24mm 20mm;
+    }
+
+    #letter .letter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10mm;
+      border-bottom: 1px solid var(--offwhite);
+      margin-bottom: 14mm;
+    }
+
+    #letter .letter-header-left {
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+    }
+
+    #letter .letter-wordmark {
+      width: 34mm !important;
+      height: auto !important;
+    }
+
+    #letter .letter-logo {
+      width: 15mm;
+      height: 15mm;
+      object-fit: contain;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    #letter .letter-identity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #letter .letter-brand {
+      font-size: 15pt;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--fg);
+      line-height: 1.2;
+    }
+
+    #letter .letter-location {
+      margin-top: 2mm;
+      font-size: 8pt;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(10,10,10,0.45);
+      font-style: italic;
+    }
+
+    #letter .letter-contact {
+      text-align: right;
+      font-size: 8.5pt;
+      line-height: 1.7;
+      color: rgba(10,10,10,0.55);
+    }
+
+    #letter .letter-contact a,
+    #letter .letter-footer-contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    #letter .letter-title-block {
+      margin-bottom: 12mm;
+    }
+
+    #letter .letter-title {
+      font-size: 18pt;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin: 5mm 0 0;
+    }
+
+    #letter .letter-body {
+      flex: 1;
+      font-size: 10pt;
+      line-height: 1.82;
+      color: rgba(10,10,10,0.82);
+    }
+
+    #letter .letter-body p {
+      margin-bottom: 5.5mm;
+    }
+
+    #letter .letter-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    #letter .letter-signoff {
+      margin-top: 10mm;
+      padding-top: 8mm;
+      border-top: 1px solid var(--offwhite);
+    }
+
+    #letter .letter-regards {
+      font-size: 9.5pt;
+      font-style: italic;
+      color: rgba(10,10,10,0.6);
+      margin-bottom: 5mm;
+    }
+
+    #letter .letter-name {
+      font-size: 11pt;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5mm;
+    }
+
+    #letter .letter-role {
+      font-size: 8.5pt;
+      letter-spacing: 0.08em;
+      color: rgba(10,10,10,0.5);
+      margin-bottom: 4mm;
+    }
+
+    #letter .letter-footer-contact {
+      font-size: 8.5pt;
+      line-height: 1.65;
+      color: var(--accent);
+    }
+
+    #letter .letter-accent-bar {
+      position: absolute;
+      left: 0;
+      top: 22mm;
+      bottom: 20mm;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--accent) 12%,
+        var(--accent2) 88%,
+        transparent 100%
+      );
+      opacity: 0.55;
+    }
+
+    /* ── Page 2: Example images ── */
+    #examples {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+    }
+
+    #examples .examples-header {
+      padding: 16mm 18mm 8mm;
+      background: transparent;
+    }
+
+    #examples .examples-title {
+      font-size: 16pt;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      margin: 4mm 0 3mm;
+      font-style: italic;
+    }
+
+    #examples .examples-subtitle {
+      font-size: 9pt;
+      line-height: 1.65;
+      color: rgba(10,10,10,0.55);
+      max-width: 120mm;
+    }
+
+    #examples .examples-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 2mm;
+      padding: 0 10mm 10mm;
+      min-height: 0;
+    }
+
+    #examples .example-cell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #examples .example-cell--hero {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      height: auto;
+      line-height: 0;
+    }
+
+    #examples .example-cell img {
+      display: block;
+    }
+
+    #examples .example-cell--hero img {
+      width: 100%;
+      height: auto;
+    }
+
+    #examples .example-cell:not(.example-cell--hero) img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #examples .example-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10mm 5mm 4mm;
+      background: linear-gradient(to top, rgba(10,10,10,0.55) 0%, transparent 72%);
+      font-size: 7pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+
+    #examples .examples-footer {
+      padding: 0 18mm 12mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      border: none;
+      margin: 0;
+    }
+
+    #examples .examples-footer-brand {
+      font-size: 8.5pt;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(10,10,10,0.62);
+    }
+
+    #examples .examples-footer-contact {
+      font-size: 7pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(10,10,10,0.38);
+    }
+  
+    /* Labels and small capitals are set in the sans. */
+    .eyebrow,
+    #letter .letter-location,
+    #letter .letter-title,
+    #examples .example-caption,
+    #examples .examples-footer-contact {
+      font-family: var(--sans);
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1: Enquiry -->
+  <section class="page" id="letter">
+    <div class="letter-accent-bar" aria-hidden="true"></div>
+
+    <header class="letter-header">
+      <div class="letter-header-left">
+        <img class="letter-logo letter-wordmark" src="./public/copa-glas-wordmark-black.svg" alt="Copa + Glas">
+        <div class="letter-identity">
+          <div class="letter-brand">Copa + Glas</div>
+          <div class="letter-location">East London</div>
+        </div>
+      </div>
+      <div class="letter-contact">
+        <a href="mailto:bradley@copaandglas.com">bradley@copaandglas.com</a><br>
+        <a href="https://copaandglas.com">copaandglas.com</a>
+      </div>
+    </header>
+
+    <div class="letter-title-block">
+      <span class="eyebrow">Workspace Enquiry</span>
+      <h1 class="letter-title">Studio Workspace Enquiry</h1>
+    </div>
+
+    <div class="letter-body">
+      <p>Copa + Glas is an East London design studio working in copper and hand cut glass. We make mirrors and lighting by hand, to order, for interior designers, architects, and private collectors.</p>
+
+      <p>We are currently looking for a workshop space in East London, between 250 and 450 square feet, suitable for light craft and making work. Ideally the space would offer good natural light, sufficient ceiling height for working with larger pieces, and an environment we can use as both a working studio and an occasional client meeting space. We would also be interested in a space that could potentially be used for a day to shoot a short film — the same industrial workshop style as shown in the enclosed images.</p>
+
+      <p>Copa + Glas is an established, trading studio with confirmed commissions and a growing client base that includes interior design practices and private clients across London and internationally.</p>
+
+      <p>We are looking to move into a suitable space as soon as the right opportunity arises, on a flexible or fixed term licence, and are open to discussion on terms.</p>
+
+      <p>Please find enclosed images showing the type of environment we are looking for. If you have anything suitable or know of any upcoming availability, we would be very glad to hear from you.</p>
+    </div>
+
+    <footer class="letter-signoff">
+      <p class="letter-regards">With best regards,</p>
+      <p class="letter-name">Bradley McWhinney</p>
+      <p class="letter-role">Creative Director, Copa + Glas</p>
+      <p class="letter-footer-contact">
+        <a href="mailto:bradley@copaandglas.com">bradley@copaandglas.com</a><br>
+        <a href="https://copaandglas.com">copaandglas.com</a>
+      </p>
+    </footer>
+  </section>
+
+  <!-- Page 2: Example environments -->
+  <section class="page" id="examples">
+    <header class="examples-header">
+      <span class="eyebrow">Reference</span>
+      <span class="rule-copper" style="margin: 4mm 0;"></span>
+      <h2 class="examples-title">Example Environments</h2>
+      <p class="examples-subtitle">The type of workshop and studio space we are looking for — natural light, generous ceiling height, and room for both making and occasional client meetings.</p>
+    </header>
+
+    <div class="examples-grid">
+      <figure class="example-cell example-cell--hero">
+        <img src="./public/workspace/studio-example-2.png" alt="Stained glass studio with workbench and natural light">
+      </figure>
+      <figure class="example-cell">
+        <img src="./public/workspace/studio-example-1.png" alt="Industrial studio with wooden workbench and window light">
+        <figcaption class="example-caption">Natural light</figcaption>
+      </figure>
+      <figure class="example-cell">
+        <img src="./public/workspace/studio-example-3.png" alt="Open plan studio with high ceilings and craft workspace">
+        <figcaption class="example-caption">Studio &amp; meeting space</figcaption>
+      </figure>
+    </div>
+
+    <footer class="examples-footer">
+      <span class="examples-footer-brand">Copa + Glas</span>
+      <span class="examples-footer-contact">East London · bradley@copaandglas.com</span>
+    </footer>
+  </section>
+
+</body>
+</html>
