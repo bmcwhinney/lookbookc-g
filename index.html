@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Handcrafted mirrors and lighting, made to order in East London. The 2026 studio lookbook.">
   <meta name="twitter:image" content="https://studiolookbook.copaandglas.com/public/og-cover-2026.jpg">
 
-  <link rel="stylesheet" href="./fonts/playfair.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./print.css" media="print">
   <style>
     /* ─── Reset ─── */
@@ -42,7 +42,8 @@
       --offwhite:#e8e3db;
       --faint:   #f5f1eb;
       --white:   #ffffff;
-      --serif:   'Playfair Display', Georgia, 'Times New Roman', serif;
+      --serif:   'Newsreader', Georgia, 'Times New Roman', serif;
+      --sans:    'Geist', 'Helvetica Neue', Arial, sans-serif;
     }
 
     /* ─── Body / print container ─── */
@@ -1469,6 +1470,35 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.2);
       line-height: 1.6;
+    }
+  
+    /* Labels and small capitals are set in the sans. */
+    .eyebrow,
+    #cover .cover-badge,
+    #cover .cover-year,
+    #cover .cover-subtitle,
+    #cover .cover-address,
+    #intro .intro-stat-label,
+    #collection-intro .ci-eyebrow,
+    #collection-intro .ci-thumb-label,
+    .product-page .prod-spec-key,
+    #aura .aura-eyebrow,
+    #aura .aura-spec-key,
+    #aura .aura-glass-label,
+    #aura .aura-swatch-name,
+    #limited .lim-edition-note,
+    #limited .lim-item-eyebrow,
+    #bespoke .bespoke-eyebrow,
+    #bespoke .bespoke-process-label,
+    #bespoke .bespoke-cta-label,
+    #heritage .heritage-top-eyebrow,
+    #heritage .heritage-item-label,
+    #trade .trade-col-label,
+    #trade .trade-contact-label,
+    #back-cover .bc-contact-label,
+    #back-cover .bc-foot-text {
+      font-family: var(--sans);
+      font-weight: 400;
     }
   </style>
 </head>
