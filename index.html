@@ -993,7 +993,7 @@
 
     #bespoke .bespoke-step-title {
       font-size: 9.5pt;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--white);
       margin-bottom: 1.5mm;
       line-height: 1.2;
@@ -1500,6 +1500,32 @@
       font-family: var(--sans);
       font-weight: 400;
     }
+  
+    /* Reading text is upright; italic is kept for short lines and accents. */
+    #collection-intro .ci-copy,
+    .product-page .prod-narrative,
+    #aura .aura-body,
+    #limited .lim-item-desc,
+    #bespoke .bespoke-intro,
+    #bespoke .bespoke-step-desc,
+    #heritage .heritage-intro,
+    #trade .trade-header-sub,
+    #trade .trade-benefit-note {
+      font-style: normal;
+    }
+    #collection-intro .ci-copy,
+    #aura .aura-body,
+    #bespoke .bespoke-intro { color: rgba(255,255,255,0.84); }
+    #bespoke .bespoke-step-desc { color: rgba(255,255,255,0.72); }
+    #trade .trade-header-sub { color: rgba(255,255,255,0.76); }
+    #bespoke .bespoke-cta-text,
+    #back-cover .bc-contact-val { color: rgba(255,255,255,0.82); }
+    #back-cover .bc-tagline { color: rgba(255,255,255,0.66); }
+    #cover .cover-tagline { color: rgba(255,255,255,0.82); }
+    .product-page .prod-narrative,
+    #limited .lim-item-desc { color: rgba(13,13,13,0.80); }
+    #heritage .heritage-intro { color: rgba(13,13,13,0.82); }
+    #trade .trade-benefit-note { color: rgba(13,13,13,0.62); }
   </style>
 </head>
 <body>
