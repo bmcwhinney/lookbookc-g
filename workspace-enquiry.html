@@ -53,7 +53,7 @@
       font-size: 7.5pt;
       letter-spacing: 0.26em;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--accent);
     }
 
@@ -107,7 +107,7 @@
 
     #letter .letter-brand {
       font-size: 15pt;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.02em;
       color: var(--fg);
       line-height: 1.2;
@@ -141,7 +141,7 @@
 
     #letter .letter-title {
       font-size: 18pt;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       line-height: 1.2;
@@ -178,7 +178,7 @@
 
     #letter .letter-name {
       font-size: 11pt;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.02em;
       margin-bottom: 1.5mm;
     }
@@ -302,7 +302,7 @@
 
     #examples .examples-footer-brand {
       font-size: 8.5pt;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.06em;
       color: rgba(10,10,10,0.62);
     }
@@ -323,35 +323,44 @@
       font-family: var(--sans);
       font-weight: 400;
     }
+  
+    /* Refinements, November 2026 */
+    .eyebrow { font-weight: 400; }
+    #letter .letter-header { align-items: flex-end; }
+    #letter .letter-wordmark { width: 36mm !important; }
+    #letter .letter-contact { font-family: var(--sans); font-size: 8pt; line-height: 1.75; color: rgba(10,10,10,0.55); }
+    #letter .letter-title { font-weight: 300; font-size: 24pt; letter-spacing: 0; text-transform: none; font-family: var(--serif); margin: 0; }
+    #letter .letter-name { font-weight: 400; letter-spacing: 0; }
+    #letter .letter-role { font-family: var(--sans); font-size: 6.5pt; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(10,10,10,0.5); }
+    #letter .letter-footer-contact { font-family: var(--sans); font-size: 8pt; }
+    #examples .examples-title { letter-spacing: 0; font-weight: 300; font-size: 18pt; }
+    #examples .examples-grid { padding: 0 18mm 10mm; }
+    #examples .examples-footer-wordmark { width: 22mm; height: auto; display: block; }
+    #examples .examples-footer-contact { font-family: var(--sans); text-transform: none; letter-spacing: 0.02em; font-size: 7.5pt; color: rgba(10,10,10,0.5); }
   </style>
 </head>
 <body>
 
   <!-- Page 1: Enquiry -->
   <section class="page" id="letter">
-    <div class="letter-accent-bar" aria-hidden="true"></div>
 
     <header class="letter-header">
       <div class="letter-header-left">
         <img class="letter-logo letter-wordmark" src="./public/copa-glas-wordmark-black.svg" alt="Copa + Glas">
-        <div class="letter-identity">
-          <div class="letter-brand">Copa + Glas</div>
-          <div class="letter-location">East London</div>
-        </div>
       </div>
       <div class="letter-contact">
+        East London<br>
         <a href="mailto:bradley@copaandglas.com">bradley@copaandglas.com</a><br>
         <a href="https://copaandglas.com">copaandglas.com</a>
       </div>
     </header>
 
     <div class="letter-title-block">
-      <span class="eyebrow">Workspace Enquiry</span>
-      <h1 class="letter-title">Studio Workspace Enquiry</h1>
+      <h1 class="letter-title">Studio workspace enquiry</h1>
     </div>
 
     <div class="letter-body">
-      <p>Copa + Glas is an East London design studio working in copper and hand cut glass. We make mirrors and lighting by hand, to order, for interior designers, architects, and private collectors.</p>
+      <p>Copa + Glas is an East London design studio working in copper and hand-cut glass. We make mirrors and lighting by hand, to order, for interior designers, architects, and private collectors.</p>
 
       <p>We are currently looking for a workshop space in East London, between 250 and 450 square feet, suitable for light craft and making work. Ideally the space would offer good natural light, sufficient ceiling height for working with larger pieces, and an environment we can use as both a working studio and an occasional client meeting space. We would also be interested in a space that could potentially be used for a day to shoot a short film — the same industrial workshop style as shown in the enclosed images.</p>
 
@@ -365,7 +374,7 @@
     <footer class="letter-signoff">
       <p class="letter-regards">With best regards,</p>
       <p class="letter-name">Bradley McWhinney</p>
-      <p class="letter-role">Creative Director, Copa + Glas</p>
+      <p class="letter-role">Creative Director</p>
       <p class="letter-footer-contact">
         <a href="mailto:bradley@copaandglas.com">bradley@copaandglas.com</a><br>
         <a href="https://copaandglas.com">copaandglas.com</a>
@@ -378,7 +387,7 @@
     <header class="examples-header">
       <span class="eyebrow">Reference</span>
       <span class="rule-copper" style="margin: 4mm 0;"></span>
-      <h2 class="examples-title">Example Environments</h2>
+      <h2 class="examples-title">Example environments</h2>
       <p class="examples-subtitle">The type of workshop and studio space we are looking for — natural light, generous ceiling height, and room for both making and occasional client meetings.</p>
     </header>
 
@@ -397,8 +406,8 @@
     </div>
 
     <footer class="examples-footer">
-      <span class="examples-footer-brand">Copa + Glas</span>
-      <span class="examples-footer-contact">East London · bradley@copaandglas.com</span>
+      <img class="examples-footer-wordmark" src="./public/copa-glas-wordmark-black.svg" alt="Copa + Glas">
+      <span class="examples-footer-contact">bradley@copaandglas.com</span>
     </footer>
   </section>
 

@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import { PDFDocument } from 'pdf-lib';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { useStaticFonts } from './static-fonts.mjs';
 import fs from 'fs';
 import { execFileSync } from 'child_process';
 
@@ -60,6 +61,8 @@ async function generatePdf() {
     });
     await page.addStyleTag({ path: printA5CssPath });
   }
+
+  await useStaticFonts(page);
 
   // Disable viewport scaling script — it wraps pages and can break PDF layout.
   await page.evaluate(() => {

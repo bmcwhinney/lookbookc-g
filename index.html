@@ -107,7 +107,7 @@
       font-size: 8px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 400;
       font-family: var(--serif);
       color: var(--accent);
     }
@@ -1526,6 +1526,27 @@
     #limited .lim-item-desc { color: rgba(13,13,13,0.80); }
     #heritage .heritage-intro { color: rgba(13,13,13,0.82); }
     #trade .trade-benefit-note { color: rgba(13,13,13,0.62); }
+  
+    /* Print refinements, November 2026 */
+    #cover .cover-maker img { width: 11mm; opacity: 0.7; margin-bottom: 2.5mm; }
+    #collection-intro .ci-thumb-label { min-height: 9mm; display: flex; align-items: flex-end; }
+    .product-page .prod-spec-row { gap: 4mm; }
+    .product-page .prod-spec-key { white-space: nowrap; flex: none; }
+    .product-page .prod-spec-val { text-wrap: balance; }
+    #limited { display: flex; flex-direction: column; }
+    #limited .lim-header { flex: none; }
+    #limited .lim-grid { flex: 1; height: auto; min-height: 0; }
+    #limited .lim-item { min-height: 0; }
+    #limited .lim-item-image { flex: 1; min-height: 0; }
+    #limited .lim-item-content { flex: none; height: 64mm; display: flex; flex-direction: column; }
+    #limited .lim-item-meta { margin-top: auto; }
+    #limited .lim-edition-note strong { text-transform: none; letter-spacing: 0; }
+    #limited .lim-item-size { font-family: var(--sans); letter-spacing: 0.02em; font-size: 7.5px; color: rgba(13,13,13,0.62); }
+    #heritage { display: flex; flex-direction: column; }
+    #heritage .heritage-top { flex: none; height: 80mm; }
+    #heritage .heritage-body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding-top: 13mm; padding-bottom: 16mm; }
+    #heritage .heritage-body > * { margin-bottom: 0; }
+    #heritage .heritage-item-img { aspect-ratio: 4 / 5; }
   </style>
 </head>
 <body>
@@ -1574,7 +1595,7 @@
         Copa + Glas was founded in 2021 by Anthony McCarty and Bradley McWhinney in East London. Every piece in the collection is made to order, hand-cut glass set in solid copper, formed and finished entirely in our studio.
       </p>
       <p class="intro-body">
-        Anthony began cutting glass aged sixteen. He has worked with glass throughout his career, from an early commission on the Saudi Arabia dome in 1983, to Hotel Café Royal's 1,000-piece copper and glass lightwell with David Chipperfield Architects. Our heritage stretches further still, drawing on the 1897 Luxfer Prism glazing tradition that shaped the architectural glass of Frank Lloyd Wright.
+        Anthony began cutting glass aged sixteen. He has worked with glass throughout his career, from an early commission on the Saudi Arabia dome in 1983, to Hotel Café Royal’s 1,000-piece copper and glass lightwell with David Chipperfield Architects. Our heritage stretches further still, drawing on the 1897 Luxfer Prism glazing tradition that shaped the architectural glass of Frank Lloyd Wright.
       </p>
       <p class="intro-body">
         Each Copa + Glas piece is not a product off a shelf. It is a considered object, selected for its materials, designed for its setting, and made by hand to last.
@@ -1582,15 +1603,15 @@
       <div class="intro-stat-row">
         <div class="intro-stat">
           <div class="intro-stat-num">40+</div>
-          <div class="intro-stat-label">Years of<br>craft experience</div>
+          <div class="intro-stat-label">Years of<br>making</div>
         </div>
         <div class="intro-stat">
           <div class="intro-stat-num">6–8</div>
-          <div class="intro-stat-label">Week lead<br>time per piece</div>
+          <div class="intro-stat-label">Weeks,<br>made to order</div>
         </div>
         <div class="intro-stat">
           <div class="intro-stat-num">1897</div>
-          <div class="intro-stat-label">Heritage<br>Luxfer lineage</div>
+          <div class="intro-stat-label">Luxfer<br>lineage</div>
         </div>
       </div>
     </div>
@@ -1610,7 +1631,7 @@
 
     <div class="ci-content">
       <div class="ci-eyebrow">The Collection · 2026</div>
-      <h2 class="ci-heading">Each piece,<br><em>made once.</em></h2>
+      <h2 class="ci-heading">Made by hand,<br><em>one at a time.</em></h2>
       <div class="ci-rule"></div>
       <p class="ci-copy">
         Seven works in copper and glass, mirrors, lighting, and limited editions, alongside an open bespoke programme. Every piece is made to order in our East London studio.
@@ -1623,15 +1644,15 @@
         </div>
         <div class="ci-thumb">
           <img decoding="async" src="./public/mondrian-mirror.jpg" alt="Mondrian Mirror">
-          <div class="ci-thumb-label">The Mondrian</div>
+          <div class="ci-thumb-label">The Mondrian<br>Mirror</div>
         </div>
         <div class="ci-thumb">
           <img decoding="async" src="./public/fibonacci-mirror-mantel.jpg" alt="Fibonacci Mirror">
-          <div class="ci-thumb-label">Fibonacci Mirror</div>
+          <div class="ci-thumb-label">The Fibonacci<br>Mirror</div>
         </div>
         <div class="ci-thumb">
           <img decoding="async" src="./public/aura-wall-light-interior.webp" alt="Aura Wall Light">
-          <div class="ci-thumb-label">Aura Wall Light</div>
+          <div class="ci-thumb-label">Aura<br>Wall Light</div>
         </div>
       </div>
     </div>
@@ -1650,7 +1671,7 @@
       <h2 class="prod-name">The Rotation<br><em>Mirror</em></h2>
       <span class="rule-copper"></span>
       <p class="prod-narrative">
-        "Twenty-six hand-cut facets set in solid copper, rigid geometry and fragmented light held in the same breath."
+        “Twenty-six hand-cut facets set in solid copper, rigid geometry and fragmented light held in the same breath.”
       </p>
       <p class="prod-body">
         The Rotation Mirror is the foundational work of the Copa + Glas collection. Its form explores the tension between the strict and the organic, a geometric framework that fractures light differently at every angle and in every room.
@@ -1696,7 +1717,7 @@
       <h2 class="prod-name">The Rotation<br><em>in Copper Tone</em></h2>
       <span class="rule-copper"></span>
       <p class="prod-narrative">
-        "Twenty-six hand-cut facets of copper-toned glass, set in solid copper."
+        “Twenty-six hand-cut facets of copper-toned glass, set in solid copper.”
       </p>
       <p class="prod-body">
         The Rotation in copper tone glass. Twenty-six facets are cut by hand and set within a frame of solid copper, itself formed by hand.
@@ -1740,7 +1761,7 @@
       <h2 class="prod-name">The Mondrian<br><em>Mirror</em></h2>
       <span class="rule-copper"></span>
       <p class="prod-narrative">
-        "Rectilinear panes in a hand-formed copper grid, an exercise in proportion and the beauty of what lies between."
+        “Rectilinear panes in a hand-formed copper grid, an exercise in proportion and the beauty of what lies between.”
       </p>
       <p class="prod-body">
         Named for its compositional kinship with the De Stijl movement, The Mondrian Mirror is built entirely from right angles. Each glass pane is cut to a precise specification and set into a copper grid that is hand-formed in the studio, the lines are never perfectly even, because they are never cast from a mould.
@@ -1790,7 +1811,7 @@
       <h2 class="prod-name">The Fibonacci<br><em>Mirror</em></h2>
       <span class="rule-copper"></span>
       <p class="prod-narrative">
-        "Spiralling golden-ratio geometry in copper and glass, the mathematics of nature made legible in a frame."
+        “Spiralling golden-ratio geometry in copper and glass, the mathematics of nature made legible in a frame.”
       </p>
       <p class="prod-body">
         The Fibonacci Mirror traces the Fibonacci sequence in glass. Each section corresponds to a number in the spiral, stepping outward from the centre in the same proportional rhythm found in nautilus shells and sunflower seed-heads.
@@ -1913,7 +1934,7 @@
           <div class="lim-item-eyebrow">Limited Edition · I of X</div>
           <h3 class="lim-item-name">The Prairie<br><em>Mirror</em></h3>
           <p class="lim-item-desc">
-            In the spirit of the Prairie School art glass windows of Frank Lloyd Wright. Clear and coloured art glass in the geometric language of the Luxfer Prism, the same tradition that shaped Wright's studio windows and our own lineage as a studio.
+            In the spirit of the Prairie School art glass windows of Frank Lloyd Wright. Clear and coloured art glass in the geometric language of the Luxfer Prism, the same tradition that shaped Wright’s studio windows and our own lineage as a studio.
           </p>
           <div class="lim-item-meta">
             <span class="lim-item-size">31.5 × 91cm · Silvered &amp; art glass</span>
@@ -2014,15 +2035,15 @@
       <div class="heritage-grid">
         <div class="heritage-item">
           <img decoding="async" class="heritage-item-img" src="./public/cafe-royal-lightwell-1.jpg" alt="Hotel Café Royal lightwell">
-          <div class="heritage-item-label">Hotel Café Royal<br>1,000+ copper &amp; glass screens<br>David Chipperfield Architects, 2012</div>
+          <div class="heritage-item-label">Hotel Café Royal · 2012<br>Copper and glass screens<br>David Chipperfield Architects</div>
         </div>
         <div class="heritage-item">
           <img decoding="async" class="heritage-item-img" src="./public/bigben.jpg" alt="Big Ben conservation">
-          <div class="heritage-item-label">Palace of Westminster<br>Big Ben conservation<br>glass restoration · 2010</div>
+          <div class="heritage-item-label">Palace of Westminster · 2010<br>Big Ben conservation<br>Glass restoration</div>
         </div>
         <div class="heritage-item">
           <img decoding="async" class="heritage-item-img" src="./public/anthony-saudi-arabia-1983.jpg" alt="Saudi Arabia commission, 1983">
-          <div class="heritage-item-label">Saudi Arabia<br>Glass dome commission<br>1983</div>
+          <div class="heritage-item-label">Saudi Arabia · 1983<br>Glass dome<br>Architectural commission</div>
         </div>
       </div>
 
@@ -2035,7 +2056,7 @@
         <div class="ht-item">
           <div class="ht-year">1983</div>
           <div class="ht-rule"></div>
-          <div class="ht-desc">Anthony's glass dome commission in Saudi Arabia, one of his earliest large-scale architectural works.</div>
+          <div class="ht-desc">Anthony’s glass dome commission in Saudi Arabia, one of his earliest large-scale architectural works.</div>
         </div>
         <div class="ht-item">
           <div class="ht-year">2012</div>

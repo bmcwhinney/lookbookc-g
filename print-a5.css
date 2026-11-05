@@ -18,7 +18,6 @@ body.format-a5 #aura .aura-glass-label,
 body.format-a5 #aura .aura-swatch-name,
 body.format-a5 #limited .lim-edition-note,
 body.format-a5 #limited .lim-item-eyebrow,
-body.format-a5 #limited .lim-item-size,
 body.format-a5 #bespoke .bespoke-eyebrow,
 body.format-a5 #bespoke .bespoke-process-label,
 body.format-a5 #bespoke .bespoke-step-num,
@@ -28,8 +27,7 @@ body.format-a5 #heritage .heritage-item-label,
 body.format-a5 #trade .trade-col-label,
 body.format-a5 #trade .trade-contact-label,
 body.format-a5 #back-cover .bc-contact-label,
-body.format-a5 #back-cover .bc-foot-text,
-body.format-a5 #heritage .ht-desc {
+body.format-a5 #back-cover .bc-foot-text{
   font-size: 6.5pt !important;
   letter-spacing: 0.12em !important;
 }
@@ -60,7 +58,6 @@ body.format-a5 #trade .trade-contact-email,
 body.format-a5 #back-cover .bc-contact-val {
   font-size: 7.5pt !important;
   line-height: 1.45 !important;
-  font-weight: 500 !important;
 }
 
 /* Slightly tighten wide-tracking headings on small page */
@@ -196,4 +193,50 @@ body.format-a5 #bespoke .bespoke-step-desc {
 
 body.format-a5 #bespoke .bespoke-cta-block {
   padding: 3.5mm 4.5mm !important;
+}
+
+/* Heritage captions: three even lines at A5 width */
+body.format-a5 #heritage .heritage-item-label {
+  font-size: 5.6pt !important;
+  letter-spacing: 0.1em !important;
+}
+body.format-a5 #heritage .ht-desc {
+  font-size: 7pt !important;
+  letter-spacing: 0 !important;
+  line-height: 1.55 !important;
+}
+body.format-a5 #limited .lim-item-size {
+  font-size: 6.5pt !important;
+}
+
+/* Limited editions: room for the full description at A5 */
+body.format-a5 #limited .lim-item-content {
+  height: 60mm !important;
+  padding: 5mm 6mm 5mm !important;
+}
+body.format-a5 #limited .lim-item-desc {
+  font-size: 7.5pt !important;
+  line-height: 1.55 !important;
+  margin-bottom: 2.5mm !important;
+}
+
+/* Product pages: keep the specification block on the page */
+body.format-a5 .product-page .prod-narrative {
+  font-size: 7.5pt !important;
+  line-height: 1.6 !important;
+}
+body.format-a5 .product-page .prod-spec-block {
+  padding: 3mm 3.5mm !important;
+}
+body.format-a5 .product-page .prod-spec-row {
+  padding: 1.3mm 0 !important;
+  gap: 3mm !important;
+}
+body.format-a5 .product-page .prod-spec-key {
+  font-size: 5.8pt !important;
+}
+body.format-a5 .product-page .prod-spec-val {
+  font-size: 7.2pt !important;
+  line-height: 1.35 !important;
+  text-wrap: pretty !important;
 }

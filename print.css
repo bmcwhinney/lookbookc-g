@@ -31,7 +31,6 @@
 #aura .aura-swatch-name,
 #limited .lim-edition-note,
 #limited .lim-item-eyebrow,
-#limited .lim-item-size,
 #bespoke .bespoke-eyebrow,
 #bespoke .bespoke-process-label,
 #bespoke .bespoke-step-num,
@@ -44,12 +43,12 @@
 #back-cover .bc-foot-text {
   font-size: 7pt !important;
   letter-spacing: 0.14em !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
 }
 
 #heritage .ht-desc {
   font-size: 7.5pt !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: 0 !important;
 }
 
 /* ── Body & supporting text ── */
@@ -80,7 +79,7 @@
 #back-cover .bc-contact-val {
   font-size: 9.5pt !important;
   line-height: 1.5 !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 
 /* ── Contrast: on-dark muted text (screen opacities print too faint) ── */

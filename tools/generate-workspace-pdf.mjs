@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import { PDFDocument } from 'pdf-lib';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { useStaticFonts } from './static-fonts.mjs';
 import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -21,6 +22,8 @@ async function generatePdf() {
 
   await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle' });
   await page.emulateMedia({ media: 'print' });
+
+  await useStaticFonts(page);
 
   await page.evaluate(async () => {
     if (document.fonts?.ready) await document.fonts.ready;
